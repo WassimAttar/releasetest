@@ -50,6 +50,7 @@ class GitHubReleaser():
 				'prerelease': False,
 		}
 		req = sanitized_Request(self.__API_URL, json.dumps(data).encode('utf-8'))
+		print(req)
 		return self.__call(req)
 
 	def create_asset(self, release_id, asset):
